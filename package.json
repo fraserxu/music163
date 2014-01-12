@@ -1,0 +1,24 @@
+{
+  "name": "music163",
+  "version": "0.0.1",
+  "description": "nodejs client for music163",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fraserxu/music163.git"
+  },
+  "keywords": [
+    "music163"
+  ],
+  "author": "fraserxu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fraserxu/music163/issues"
+  },
+  "dependencies": {
+    "hyperquest": "~0.2.0"
+  }
+}
