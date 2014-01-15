@@ -14,19 +14,19 @@ var player = require('..')
 // test('album', function(t) {
 //   t.plan(1);
 
-  // player.album('23497', function(err, res) {
-  //   if(err) console.log(err);
-  //   console.log('album info: ', res)
+  player.album('23497', function(err, res) {
+    if(err) console.log(err);
+    console.log('album info: ', res)
   //   // t.equal(typeof res, 'object')
-  // })
+  })
 // })
 
 // test('detail', function(t) {
 //   t.plan(1);
 
-  // player.detail('233931', function(err, res) {
-  //   if(err) console.log(err);
-  //   console.log('song info: ', res)
-  //   // t.equal(typeof res, 'object')
-  // })
+  player.detail('233931', function(err, res) {
+    if(err) console.log(err);
+    console.log('song info: ', res)
+    // t.equal(typeof res, 'object')
+  })
 // })
