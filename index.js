@@ -20,19 +20,22 @@ module.exports = {
       s: key,
       csrf_token: ''
     }
-    var opts = {
-      headers: HEADERS
-    }
-    var req = hyperquest.post(API.search, opts);
-    req.setHeader('Content-Type', 'application/x-www-form-urlencoded');
-    req.setHeader('Content-Length', qs.stringify(params).length);
-    req.end(qs.stringify(params));
-    req.on('error', function(err) {
-      return cb(err)
+
+    var req = hyperquest({
+      uri: API.search + '?',
+      headers: HEADERS,
+      method: 'POST'
     })
+    req.setHeader('Content-Type', 'application/x-www-form-urlencoded')
+    req.setHeader('Content-Length', qs.stringify(params).length)
+    req.end(qs.stringify(params))
     req.pipe(concat(function(data) {
       return cb(null, JSON.parse(data))
     }))
+
+    req.on('error', function(err) {
+      return cb(err)
+    })
   },
 
   album: function(key, cb) {
@@ -40,13 +43,14 @@ module.exports = {
       id: key,
       csrf_token: ''
     }
-    var opts = {
+
+    var req = hyperquest({
       uri: API.album + key + '?' + qs.stringify(params),
       headers: HEADERS
-    }
-    var req = hyperquest(opts).pipe(concat(function(data) {
+    }).pipe(concat(function(data) {
       return cb(null, JSON.parse(data))
-    }));
+    }))
+
     req.on('error', function(err) {
       return cb(err)
     })
@@ -58,13 +62,14 @@ module.exports = {
       ids: '[' + key + ']',
       csrf_token: ''
     }
-    var opts = {
+
+    var req = hyperquest({
       uri: API.detail + '?' + qs.stringify(params),
       headers: HEADERS
-    }
-    var req = hyperquest(opts).pipe(concat(function(data) {
+    }).pipe(concat(function(data) {
       return cb(null, JSON.parse(data))
-    }));
+    }))
+
     req.on('error', function(err) {
       return cb(err)
     })
