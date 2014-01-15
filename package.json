@@ -19,6 +19,10 @@
     "url": "https://github.com/fraserxu/music163/issues"
   },
   "dependencies": {
+    "concat-stream": "~1.4.1",
     "hyperquest": "~0.2.0"
+  },
+  "devDependencies": {
+    "tape": "~2.3.2"
   }
 }
