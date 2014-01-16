@@ -9,7 +9,7 @@ The easiest way to use music163 is to install it with npm: `npm install music163
 
 API
 ---
-Currently, there's only three (useful) methods available:
+Currently, there's only four (useful) methods available:
 
 ```javascript
 search: function('G.E.M', cb)
@@ -17,6 +17,10 @@ search: function('G.E.M', cb)
 
 ```javascript
 album: function('23497', cb)
+```
+
+```javascript
+playlist: function('5151832', cb)
 ```
 
 ```javascript
