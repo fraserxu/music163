@@ -1,5 +1,7 @@
-music163
+### music163
 ========
+
+[![Build Status](https://travis-ci.org/fraserxu/music163.png?branch=master)](https://travis-ci.org/fraserxu/music163)
 
 nodejs client for music163
 

@@ -4,7 +4,7 @@
   "description": "nodejs client for music163",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
