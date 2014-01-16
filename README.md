@@ -1,4 +1,5 @@
-### music163
+music163
+====
 
 nodejs client for music163
 
@@ -16,6 +17,10 @@ search: function('G.E.M', cb)
 
 ```javascript
 album: function('23497', cb)
+```
+
+```javascript
+playlist: function('5151832', cb)
 ```
 
 ```javascript
