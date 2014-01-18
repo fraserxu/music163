@@ -12,7 +12,8 @@ var API = {
   search: 'http://music.163.com/api/search/suggest/web',
   album: 'http://music.163.com/api/album/',
   detail: 'http://music.163.com/api/song/detail',
-  playlist: 'http://music.163.com/api/playlist/detail'
+  playlist: 'http://music.163.com/api/playlist/detail',
+  dj: 'http://music.163.com/api/dj/program/detail'
 }
 
 /**
@@ -68,6 +69,30 @@ module.exports = {
 
     var req = hyperquest({
       uri: API.playlist + '?' + qs.stringify(params),
+      headers: HEADERS
+    }).pipe(concat(function(data) {
+      return cb(null, JSON.parse(data))
+    }))
+
+    req.on('error', function(err) {
+      return cb(err)
+    })
+  },
+
+  /**
+   * get playlist by ID
+   * @param  {string}   key ID
+   * @param  {Function} cb  callback function
+   * @return {object}       response playlist
+   */
+  dj: function(key, cb) {
+    var params = {
+      id: key,
+      csrf_token: ''
+    }
+
+    var req = hyperquest({
+      uri: API.dj + '?' + qs.stringify(params),
       headers: HEADERS
     }).pipe(concat(function(data) {
       return cb(null, JSON.parse(data))

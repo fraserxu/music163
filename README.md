@@ -6,11 +6,13 @@ nodejs client for music163
 
 Install
 ---
-The easiest way to use music163 is to install it with npm: `npm install music163`
+The easiest way to use music163 is to install it with npm:
+
+`npm install music163`
 
 API
 ---
-Currently, there's only for (useful) methods available:
+Currently, there's five (useful) methods available:
 
 ```javascript
 search: function('G.E.M', cb)
@@ -22,6 +24,10 @@ album: function('23497', cb)
 
 ```javascript
 playlist: function('5151832', cb)
+```
+
+```javascript
+dj: function('73004', cb)
 ```
 
 ```javascript
