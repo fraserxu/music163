@@ -1,4 +1,5 @@
 ### music163
+[![NPM](https://nodei.co/npm/music163.png)](https://nodei.co/npm/music163/)
 
 [![Build Status](https://travis-ci.org/fraserxu/music163.png?branch=master)](https://travis-ci.org/fraserxu/music163)
 
